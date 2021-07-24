@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <!-- fontowsome api for social media icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Capston Project</title>
+</head>
+<body>
+
+<div class="jumbotron fixed-top">
+    <div class="container">
+       <div class="text">
+         <h1>Shoes Classfication</h1>
+         <p> A Flask Web App which Classify the Types of Shoes using CNN </p>
+            <div class="text-align">
+                <a href="https://github.com/fenilmpatel/End2End_logistic_reg/"><i class="fa fa-github fa-lg git-color" aria-hidden="false"></i></a>
+                <a href="https://fenilpatel39.medium.com/"><i class="fa fa-medium fa-lg git-color" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/fenil-patel-452a69122/"><i class="fa fa-linkedin fa-lg linkedin-color" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/fenilpatel39/"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/fenilpatel.39/"><i class="fa fa-instagram fa-lg insta-color" aria-hidden="true"></i></a>
+            </div>
+      
+       </div>
+    
+    </div>
+   
+</div>
+<p>
+   
+
+
+    <main role="main" class="content-section">
+    {% block temp %}{% endblock %}
+
+        <div class="row">
+            <div class="col-sm-25 col-md-8">
+
+                
+
+                {% if file_name %}
+                    <div>
+                        <!-- <img src="{{ file_path }}" alt="Selected Image" height="272" width="272"> -->
+
+                        <img src="{{ url_for('display_image', file_name=file_name) }}" alt="Selected Image" height="272" width="272">
+                    </div>
+
+                    <br>
+                    <br>
+                    <h2>Prediction:{{ result }}</h2>
+
+                {% endif %}
+              
+             </div>
+            
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

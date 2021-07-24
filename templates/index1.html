@@ -1,0 +1,48 @@
+{% extends "layout01.html" %}
+{% block temp %}
+
+
+
+    
+
+
+            <!-- <h4>Image Classifier</h4> -->
+
+            <!-- <div> -->
+
+                
+                <form method="POST" enctype="multipart/form-data" action="{{url_for('upload')}}">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Enter Your text Here</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" cols=""></textarea>
+                      </div>
+                       
+                        <br>
+                        <div>
+                            <button type="submit" class="btn btn-outline-success btn-lg btn-block" id="btn-predict">Predict</button>
+                        </div>
+                        <br>
+                    
+                    
+
+                </form>
+            
+                <!-- <div class="form-group green-border-focus">
+                    <label for="exampleFormControlTextarea5">Enter Your Text Here</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                </div>
+                 -->
+            
+            
+             
+            
+ 
+
+        
+    <!-- </div> -->
+   
+
+    <br>
+   <br>
+   
+{% endblock temp %}
